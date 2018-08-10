@@ -4,6 +4,7 @@ define ('VERSION_RPirrigate', '0.1.0');
 
 $RPirrigate_supported_languages= array(
 	'EN'=>'English',
+	'FR'=>'Frensh',
 	'IT'=>'Italiano'
 	);
 
@@ -142,7 +143,7 @@ class DB_CONN {
 
 	public function __construct(){
 
-		$this->db_conn = new PDO("sqlite:/srv/rpirrigate/data/database.sqlite","","", array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+		$this->db_conn = new PDO("sqlite:../data/database.sqlite","","", array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
 	}
 
 	public function __destruct(){
